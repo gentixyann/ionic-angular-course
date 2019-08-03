@@ -1,8 +1,5 @@
 {
-  "name": "ionic-angular-course",
-  "integrations": {
-    "capacitor": {},
-    "cordova": {}
-  },
+  "name": "restart",
+  "integrations": {},
   "type": "angular"
 }
