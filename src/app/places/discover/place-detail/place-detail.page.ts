@@ -32,7 +32,9 @@ export class PlaceDetailPage implements OnInit {
   onBookPlace() {
     //this.router.navigateByUrl('/places/tabs/discover');
     //this.navCtrl.navigateBack('/places/tabs/discover');
-    this.modalCtrl.create({component: CreateBookingComponent})
+    this.modalCtrl.create({component: CreateBookingComponent,
+    componentProps: { selectedPlace: this.place }
+  })
     .then(modalEl => {
       modalEl.present();
     })
