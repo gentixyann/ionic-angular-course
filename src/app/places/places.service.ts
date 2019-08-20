@@ -52,9 +52,11 @@ export class PlacesService {
     private http: HttpClient) { }
   
   fetchPlaces() {
-    this.http
+    return this.http
       .get('https://ionic-angular-course-a2b2c.firebaseio.com/offered-places.json')
-      .pipe();
+      .pipe(tap(resData => {
+        console.log(resData);
+      }));
   }
 
   getPlace(id: string) {
